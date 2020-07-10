@@ -1,0 +1,424 @@
+
+.header {
+	padding-top: 29px;
+	background-color: #fbfbfb;
+}
+
+
+
+.nav__menu {
+	width: 279px;
+}
+
+.nav-adv {
+	display: none;
+}
+
+/*Меню бургер*/
+
+.nav-adv__menu {
+  display: none;
+}
+
+.active {
+  display: block;
+  position: absolute;
+}
+
+.flowing-scroll {
+	display: inline-block;
+}
+
+
+.burger {
+	display: block;
+	width: 46px;
+	min-height: 33px;
+	background-color: #fff;
+	position: relative;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+	position: absolute;
+	top: 50%;
+	width: 46px;
+	min-height: 6px;
+	margin-top: -2px;
+}
+.burger span::before,
+.burger span::after{
+	content: '';
+	display: block;
+	transition: 0.2s;
+}
+
+.burger span::before {
+	transform: translateY(-14px);
+	background: linear-gradient(to top right,#ff4886,#ff2f96);
+}
+
+.burger span::after {
+	transform: translateY(12px);
+	background: linear-gradient(to top right,#ff8f5a,#ff726c);
+}
+
+.burger span {
+	background: linear-gradient(to top right,#ff756a,#ff2f96);
+}
+
+.burger-active span {
+	min-height: 0;
+}
+
+.burger-active span:before {
+	transform: rotate(45deg);
+
+}
+
+.burger-active span:after {
+	transform: rotate(-45deg);
+	background: linear-gradient(to top right,#ff4886,#ff2f96);
+}
+
+
+.nav__menu a {
+	color: #1f1f24;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.nav__menu a:hover {
+	color: #fc557c;
+	text-decoration: underline;
+}
+
+.header-contacts__tel {
+	color: #1f1f24;
+	font-size: 25px;
+	font-weight: 700;
+	margin-right: 28px;
+	transition: 200ms;
+}
+
+.header-contacts__tel:hover {
+	color: #f53f4f;
+	transition: 200ms;
+}
+
+.header-contacts__call-order {
+	padding: 13px 40px;
+	background-color: transparent;
+	cursor: pointer;
+	text-align:center;
+	border: 1px solid #f82370;
+  	color: #f53f4f;
+  	transition: 400ms ease;
+
+  	font-size: 16px;
+  	font-weight: 400;
+}
+
+.header-contacts__call-order:hover {
+	border: 1px solid #f37c7c;
+  	color: #fff;
+  	background-color: #f82370;
+  	transition: 400ms ease;
+}
+
+.call-order-icon {
+	vertical-align: middle;
+    background: url(../img/call-order-icon.png) no-repeat;
+    border: 0;
+    min-height: 26px;
+    width: 27px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.my-info {
+	min-height: 693px;
+	background-image: url('../img/Ellipse_1.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 815px 630px;
+	background-color: #FBFBFB;
+	position: relative;
+	overflow: hidden;
+}
+
+.about {
+	width: 100%;
+	max-width: 1210px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	padding: 0 20px;
+	z-index: 1;
+}
+	
+
+.about__name-man {
+	font-size: 80px;
+	color: #1f1f24;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.about__profession {
+	padding-top: 14px;
+	font-size: 25px;
+	color: #8993ad;
+}
+
+.know-more-btn {
+	display: block;
+    max-width: 269px;
+    padding: 18px 10px;
+    background-color: #ff4e2e;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+.know-more-btn:hover {
+	background-color: #ff7e66;
+	transition: 400ms;
+}
+
+.my-info__portriet {
+	position: absolute;
+	top: 55px;
+    right: 293px;
+	min-height: 651px;
+	max-width: 553px;
+	filter: drop-shadow(16px 16px 20px black);
+	
+}
+
+
+
+.wrapper-two {
+	margin-top: 80px;
+}
+
+.wrapper-two h2, .wrapper-three h2 {
+	text-align: center;
+	font-size: 54px;
+	color: #262626;
+}
+
+.wrapper-two a {
+	margin: 0 auto;
+	margin-top: 95px;
+}
+ 
+.wrapper-three a {
+	margin: 0 auto;
+	margin-top: 92px;
+}
+
+
+.services {
+	margin-top: 81px;
+
+}
+
+.services__service {
+	width: 260px;
+	text-align: center;
+}
+
+.services__service p {
+	padding-top: 15px;
+	font-size: 20px;
+	color: #8993ad;
+}
+
+.wrapper-three {
+	position: relative;
+	margin-top: 185px;
+	background-color: #FBFBFB;
+	padding-bottom: 100px;
+}
+
+.my-works {
+	margin-top: 95px;
+}
+
+
+.footer-banner {
+	width: 100%;
+	min-height: 364px;
+	background: linear-gradient(to top right, #ff8f5a, #ff2f96);
+}
+
+.footer-banner h3 {
+	width: 945px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 45px;
+	font-weight: bold;
+	padding-top: 73px;
+}
+
+.footer-banner p {
+	width: 945px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 23px;
+} 
+
+.footer__links li {
+	font-size: 18px;
+	color: #8993AD;
+	margin-bottom: 10px;
+}
+
+.footer__links a:hover {
+	color: #fc557c;
+	text-decoration: underline;
+}
+
+.footer__elements {
+	margin-top: 78px;
+    margin-bottom: 75px;
+	align-items: flex-start;
+}
+
+.footer__contacts {
+	padding-left: 103px;
+}
+
+.footer__contacts ul li:first-child {
+	margin-bottom: 21px;
+}
+
+.tel-link-footer {
+	color: #1f1f24;
+	font-size: 25px;
+	font-weight: 700;
+	transition: 400ms;
+}
+
+.tel-link-footer:hover {
+	color: #ff4e2e;
+	transition: 400ms;
+}
+
+.icofont-envelope {
+	font-size: 27px;
+	background: linear-gradient(0deg, #ff8f5a, #ff2f96);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.icofont-phone {
+	font-size: 27px;
+	background: linear-gradient(0deg, #ff8f5a, #ff2f96);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.mail-link-footer {
+	color: #1f1f24;
+	font-size: 25px;
+	font-weight: 700;
+	padding-left: 11px;
+	transition: 400ms;
+}
+
+.mail-link-footer:hover {
+	color: #ff4e2e;
+	transition: 400ms;
+}
+
+.social__call-order {
+	padding: 13px 60px;
+	background-color: transparent;
+	cursor: pointer;
+	text-align:center;
+	border: 1px solid #f82370;
+  	color: #f53f4f;
+  	transition: 400ms ease;
+}
+
+.social__call-order:hover {
+	border: 1px solid #f37c7c;
+  	color: #fff;
+  	background-color: #f82370;
+  	transition: 400ms ease;
+}
+
+.social {
+	padding-right: 22px;
+}
+
+.social__links {
+	padding-top: 18px;
+}
+
+
+
+.social__links a {
+	display: inline-block;
+	background: url(../img/sprite_social.png) no-repeat;
+    width: 50px;
+    min-height: 40px;
+
+    transition: 300ms; 
+   	opacity: 0.6;
+}
+
+.social__links a:hover {
+	opacity: 1;
+    transition: 300ms; 
+ }
+
+a.vk {
+	background-position: 3px bottom;
+}
+
+a.facebook {
+	background-position: -53px bottom;
+}
+
+a.twitter {
+	background-position: -106px bottom;
+}
+
+a.instagramm {
+	background-position: -160px bottom;
+}
+
+.footer-bar {
+
+}
+
+.footer-bar {
+	background-color: #31293c;
+}
+
+.footer-bar p {
+	text-align: center;
+	padding: 27px;
+	color: #fff;
+}
+
+
+
+
+.fly-elements__footer {
+	display: none;
+}
+
+
+.ebat {
+	background: green;
+}
