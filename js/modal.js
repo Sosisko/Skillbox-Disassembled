@@ -28,10 +28,9 @@ btnClose.onclick = function () {
 	$('.overlay').css('display', 'none'); //Выключает модальное окно по нажатию на кнопку Х
 	$('.blur').css('filter','blur(0)'); //Выключаем размытие фона
 	$(document.body).css('overflow', 'visible'); //Включаем скролл для body
-	$('label').css('display', 'none'); //Убирает lable при закрытии на крестик
-	$('.popup__input').removeClass('error'); //Убирает класс error при закрытии на крестик
-	$('.popup__input').val(''); //Очищает поля вводов при закрытии на крестик
-};
+	$('.popup__input').val('');
+	$('#name-error, #phone-error, #email-error').hide();
+}
 
 window.onclick = function (event) {
 	if (event.target == modal) {
@@ -39,9 +38,8 @@ window.onclick = function (event) {
 		$('.blur').css('filter','blur(0)'); //Выключаем размытие фона
 		$(document.body).css('overflow', 'visible'); //Включаем скролл для body
 		$('.wrapper__popup_sended').hide(); //Скрывает окно сообщения отправки
-		$('label').css('display', 'none'); //Убирает lable по нажатию вне окна
-		$('.popup__input').removeClass('error'); //Убирает класс error по нажатию вне окна
-		$('.popup__input').val(''); //Очищает поля вводов по нажатию вне окна
+		$('.popup__input').val('');
+		$('#name-error, #phone-error, #email-error').hide();
 	}
 };
 
@@ -56,70 +54,88 @@ var btnCloseOk = $('.close-btn-ok')[0];
 		};
 
 
-jQuery.validator.addMethod("checkMask", function(e, o) {
-			return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(e)
-		});
 
-$('input[type="tel"]').inputmask({mask: "+7(999)999-9999"});
 
-$(".popup__form_call").each(function() {
-    $(this).validate({
-        focusInvalid: !1,
-        rules: {
-            name: {
-                required: !0
-            },
-            phone: {
-                required: !0,
-                checkMask: !0
-            }
-        },
-        messages: {
-            name: {
-                required: "Введите ваше имя"
-            },
-            phone: {
-                required: "Введите номер телефона",
-                checkMask: "Введите полный номер телефона"
-            }
-        },
-        submitHandler: function(e) {
-            $(".wrapper__popup_sended").show(),
-            $(".popup__input").val("")
-        }
-    })
+//Добавляем правило в плагин validate используя плагин inputmask (взято отсюда https://ru.stackoverflow.com/questions/682481/%D0%92%D0%B0%D0%BB%D0%B8%D0%B4%D0%B0%D1%86%D0%B8%D1%8F-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5-%D1%81-%D0%BC%D0%B0%D1%81%D0%BA%D0%BE%D0%B9-%D1%84%D0%BE%D1%80%D0%BC%D1%8B)
+jQuery.validator.addMethod("checkMask", function(value, element) {
+    return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value); 
 });
-$(".popup__form_more").each(function() {
-    $(this).validate({
-        focusInvalid: !1,
-        rules: {
-            name: {
-                required: !0
-            },
-            phone: {
-                required: !0,
-                checkMask: !0
-            },
-            email: {
-                required: !0,
-                email: !0
-            }
-        },
-        messages: {
-            name: {
-                required: "Введите ваше имя"
-            },
-            phone: {
-                required: "Введите номер телефона",
-                checkMask: "Введите полный номер телефона"
-            },
-            email: {
-                required: "Введите Корректный Email"
-            }
-        },
-        submitHandler: function(e) {
-            $(".wrapper__popup_sended").show(),
-            $(".popup__input").val("")
-        }
-    })
+
+$('input[type="tel"]').inputmask({"mask": "+7(999)999-9999"}); 
+//Конец правила
+
+
+
+
+
+$('.popup__form_call').each(function() { //Валидация формы "Заказать звонок"
+	$(this).validate({
+		// errorPlacement(error, element) {
+		// 	return true;
+		// },
+		focusInvalid: false,
+		rules: {
+			name: {
+				required: true,
+			},
+			phone: {
+				required: true,
+				checkMask: true
+			}
+		},
+		messages: {
+			name: {
+				required: 'Введите ваше имя'
+			},
+			phone: {
+				required: 'Введите номер телефона',
+				checkMask: "Введите полный номер телефона"
+			},
+		},
+		submitHandler: function(form) {
+			$('.wrapper__popup_sended').show(); //Показывает отрисовку, что форма отправлена
+			$('.popup__input').val(''); //Очищает поля инпутов после отправки
+		}
+	})
 });
+
+
+$('.popup__form_more').each(function() { //Валидация формы с емайлом
+	$(this).validate({
+		// errorPlacement(error, element) {
+		// 	},
+
+		focusInvalid: false,
+		rules: {
+			name: {
+				required: true
+			},
+			phone: {
+				required: true,
+				checkMask: true
+			},
+			email: {
+				required: true,
+				email: true
+			}
+
+		},
+		messages: {
+			name: {
+				required: 'Введите ваше имя'
+			},
+			phone: {
+				required: 'Введите номер телефона',
+				checkMask: "Введите полный номер телефона"
+			},
+			email: {
+				required: 'Введите Корректный Email'
+			},
+		},
+		submitHandler: function(form) {
+			$('.wrapper__popup_sended').show(); //Показывает отрисовку, что форма отправлена
+			$('.popup__input').val(''); //Очищает поля инпутов после отправки
+		}
+	})
+});
+

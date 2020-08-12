@@ -99,6 +99,7 @@
 	margin-top: 30px;
 	min-width: 250px;
 	min-height: 40px;
+	border-radius: 30px;
 	border: none;
 	background-color: #ebebeb;
 	outline: none;
@@ -112,18 +113,19 @@
     background-color: transparent;
     cursor: pointer;
     text-align: center;
-    border: 1px solid #ff4e2e;
-    color: #ff4e2e;
+    border: 1px solid #007cde;
+    color: #007cde;
   	transition: 400ms ease;
     font-size: 20px;
     font-weight: 400;
+    border-radius: 10px;
     bottom: 25px;
 }
 
 .popup__send-btn:hover {
 	border: 1px solid #007cde;
   	color: #fff;
-  	background-color: #ff4e2e;
+  	background-color: #007cde;
   	transition: 400ms ease;
 }
 
@@ -131,13 +133,13 @@
 	 	filter: blur(3px);
 }
 
+
 .error {
 	border: 1px solid red;
 }
 
 
-#name-error, #phone-error, #email-error,
-#nameFormMore-error, #phoneFormMore-error, #emailFormMore-error {
+#name-error, #phone-error, #email-error {
 	position: absolute;
 	top: 165px;
 	color: red;
@@ -145,11 +147,11 @@
 	border: none;
 	padding-left: 20px;
 }
-#phone-error, #phoneFormMore-error {
+#phone-error {
 	top: 236px;
 }
 
-#email-error, #emailFormMore-error {
+#email-error {
 	top: 307px;
 }
 

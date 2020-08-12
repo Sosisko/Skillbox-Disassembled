@@ -47,11 +47,11 @@ $(window).scroll(function() {
  /*Если сделали скролл на 1500px задаём новый класс active для летающих элементов.*/
   if(heightWindow > 1500){
       $('.fly-elements__footer').show();
-      $('.fly-elements__footer__item').addClass('active');
+      $('.fly-elements__footer_item').addClass('active');
 } else{
 /*Если меньше 1600px удаляем класс active для летающих элементов*/
       $('.fly-elements__footer').hide();
-      $('.fly-elements__footer__item').removeClass('active');
+      $('.fly-elements__footer_item').removeClass('active');
 }
 });
 

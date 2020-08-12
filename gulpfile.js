@@ -1,9 +1,8 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-
+const gulp = require('gulp'),
+      concat = require('gulp-concat');
+      autoprefixer = require('gulp-autoprefixer');
+      cleanCSS = require('gulp-clean-css');
+      uglify = require('gulp-uglify');
 
 
 const cssFiles = [
@@ -29,23 +28,24 @@ function styles() {
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('./build/css'))
+
 }
 
-const jsFiles = [
-    'js/swiper-main.js',
-    'js/main.js',
-    'js/modal.js'
+const scriptsFiles = [
+	'js/swiper-main.js',
+	'js/main.js',
+	'js/modal.js',
 ];
 
-
 function scripts() {
-    return gulp.src(jsFiles)
-    .pipe(concat('all-main.js'))
-    .pipe(uglify({
-        toplevel: true,
-    }))
-    .pipe(gulp.dest('./build/js'))
+	return gulp.src(scriptsFiles)
+		.pipe(concat('all-main.js'))
+		.pipe(uglify({
+			toplevel: true,
+		}))
+		.pipe(gulp.dest('./build/js'))
 }
+
 
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);

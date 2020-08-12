@@ -2,29 +2,7 @@
 	.about__name-man {
 		font-size: 54px;
 	}
-	
 }
-
-@media (max-width: 1260px) {
-	.arrows {
-		display: none;
-	}
-}
-
-
-@media (max-width: 1200px) {
-	.swiper-container  {
-		padding-bottom: 86px;
-	}
-
-	.swiper-container-horizontal>.swiper-pagination-bullets {
-		display: block;
-		position: absolute;
-		bottom: -3px;
-	}
-
-}
-
 
 @media (max-width: 1165px) {
 	.my-info  {
@@ -35,7 +13,23 @@
 	.my-info__portriet {
 		right: 38px;
 	}
-	
+}
+
+
+@media (max-width: 1200px) {
+	.swiper-container  {
+		padding-bottom: 86px;
+	}
+	.arrows {
+		display: none;
+	}
+
+	.swiper-container-horizontal>.swiper-pagination-bullets {
+		display: block;
+		position: absolute;
+		bottom: -3px;
+	}
+
 }
 
 
@@ -56,8 +50,8 @@
 	.nav-adv {
 		display: inline-block;
 	}
-	.about {
-		padding: 0 40px;
+	.about__name-man {
+    
 	}
 	.about__profession {
     	padding-top: 20px;
@@ -78,18 +72,11 @@
 	.wrapper-two a {
     margin-top: 14px;
 	}
-	.wrapper-three a {
-		margin-top: 97px;
-	}
 	.footer-banner h3, .footer-banner p  {
 		width: 100%;
 		padding-left: 40px;
 		padding-right: 40px;
 	}
-	.footer-banner p {
-		padding-bottom: 20px;
-	}
-
 	.social {
     	padding-right: 0;
 	}
@@ -223,7 +210,6 @@
 	}
 	.wrapper-two {
 		margin-top: 165px;	
-		width: 100%;
 	}
 
 	.social {
@@ -245,6 +231,9 @@
 	.my-info, .my-info__portriet {
 		min-height: auto;
 	}
+	.wrapper-two {
+    	width: 580px;
+	}
 
 	.nav-adv__menu li {
 		padding: 0;
@@ -255,6 +244,7 @@
 
 @media (max-width: 600px) {
 	.fixed-container {
+		width: 420px;
 		padding: 0 20px;
 	}
 
@@ -305,6 +295,7 @@
 	}
 	.footer__links, .footer__contacts {
 		margin: 0 auto;
+		text-align: center;
 	}
 }
 
@@ -313,7 +304,6 @@
 		width: 280px;
 		padding: 0;
 	}
-
 	.footer-banner h3 {
 		font-size: 26px;
 		padding-top: 43px;
@@ -332,13 +322,6 @@
 		margin-top: 20px;
 		padding-left: 0;
 	}
-	.footer__links, .footer__contacts {
-		text-align: center;
-	}
-	.footer__elements {
-		margin-top: 40px;
-	}
-
 }
 
 @media (max-width: 320px) {
@@ -351,17 +334,14 @@
 		min-height: 414px;
 	}
 	.my-info__portriet {
-		max-width: 223px;
-		height: 413px;
-		padding-top: 80px;
-    	margin-left: 77px;
+		position: absolute;
+		top: 81px;
+		right: 22px;
+		max-width: 221px;
 	}
 
 	.about__name-man, .wrapper-two h2, .wrapper-three h2{
 		font-size: 30px;
-	}
-	.about__name-man {
-		padding-top: 14px;
 	}
 
 	.wrapper-three h2 {
@@ -485,7 +465,7 @@
 		margin-top: 0;	
 	}
 	.about {
-		padding: 0;
+		margin-top: -7px;
 	}
 	.swiper-container-horizontal>.swiper-pagination-bullets {
 		bottom: 12px;

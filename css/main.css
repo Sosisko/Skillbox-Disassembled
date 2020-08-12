@@ -152,19 +152,16 @@
 
 .about {
 	width: 100%;
-	max-width: 1210px;
-	margin: 0 auto;
-	margin-bottom: 25px;
-	padding: 0 20px;
-	z-index: 1;
+	margin-bottom: 20px;
 }
-	
 
 .about__name-man {
 	font-size: 80px;
 	color: #1f1f24;
 	font-weight: 900;
 	line-height: normal;
+
+
 }
 
 .about__profession {
@@ -220,7 +217,7 @@
  
 .wrapper-three a {
 	margin: 0 auto;
-	margin-top: 92px;
+	margin-top: 96px;
 }
 
 
@@ -248,7 +245,7 @@
 }
 
 .my-works {
-	margin-top: 95px;
+	margin-top: 91px;
 }
 
 

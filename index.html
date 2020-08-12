@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/fly-elements.css">
 	<link rel="stylesheet" href="css/modal.css">
-	
-	
+
+
 </head>
 <body>
 <div class="blur">	
@@ -62,13 +62,15 @@
 				<div class="my-info__portriet">
 					<img  class="photo" src="img/photo_man.png" alt="myPhoto">
 				</div>
-				<div class="about">
+
+				<div class="about fixed-container">
 					<h1 class="about__name-man">Дмитрий Алексеев</h1>
 					<p class="about__profession">Frontend и React-разработчик</p>
 					<a class="know-more-btn" href="#">Узнать больше</a>
 				</div>
 			</div>
 		</section>
+		
 
 		<section id="wrapper-two" class="wrapper-two fixed-container">
 			<h2>Что я делаю</h2>
@@ -112,7 +114,6 @@
 					<div class="swiper-button-prev"></div>
 			    	<div class="swiper-button-next"></div>
 				</div>
-
 				<div class="swiper-container">
 				    <div class="swiper-wrapper">
 				        <div class="swiper-slide">
@@ -133,17 +134,17 @@
 			</div>	
 			<a class="know-more-btn" href="#">Заказать проект</a>
 		</section>
-
+		
 		<section id="footer-banner" class="footer-banner">
 			<div class="fly-elements__footer">
-				<span class="fly-elements__footer__item fly-elements__footer__item_braces 1">{&nbsp;}</span>
-				<span class="fly-elements__footer__item fly-elements__footer__item_div 2">&lt;div&gt;</span>
-				<span class="fly-elements__footer__item fly-elements__footer__item_hash 3">#</span>
-				<span class="fly-elements__footer__item fly-elements__footer__item_closed 4">&lt;/&gt;</span>
-				<span class="fly-elements__footer__item fly-elements__footer__item_braces2 5">{&nbsp;}</span>
+				<span class="fly-elements__footer_item item-1">{&nbsp;}</span>
+				<span class="fly-elements__footer_item item-2">&lt;div&gt;</span>
+				<span class="fly-elements__footer_item item-3">#</span>
+				<span class="fly-elements__footer_item item-4">&lt;/&gt;</span>
+				<span class="fly-elements__footer_item item-5">{&nbsp;}</span>
 			</div>
-				<h3>Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h3>
-				<p>* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально, в зависимости от сложности задач.</p>
+			<h3>Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h3>
+			<p>* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально, в зависимости от сложности задач.</p>
 		</section>
 		
 		<footer class="footer">
@@ -197,9 +198,9 @@
 				<form action="" class="popup__form_call">
                         <input class="popup__input" id="name" type="text" placeholder="Ваше имя" name="name">
                         <label for="name"></label>
-                        <input class="popup__input" id="phone" type="tel" placeholder="Номер телефона" name="phone">
+                        <input class="popup__input" id="phone" type="tel" placeholder="Номер телефона" name="phone" data-rule-required="true" data-rule-minlength="10" data-msg="Введите номер телефона">
                         <label for="phone"></label>
-                        <button type="submit" class="popup__send-btn">Отправить</button>
+                         <button type="submit" class="popup__send-btn">Отправить</button>
                 </form>
                 <form action="" class="popup__form_more">
                         <input class="popup__input" id="name" type="text" placeholder="Ваше имя" name="name">
@@ -222,8 +223,9 @@
 
 
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.inputmask.min.js"></script>
+
 	<script src="js/swiper.min.js"></script>
 	<script src="js/swiper-main.js"></script>
 	<script src="js/main.js"></script>
